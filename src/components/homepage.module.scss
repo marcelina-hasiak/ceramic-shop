@@ -1,0 +1,49 @@
+.header-and-main-content-wrapper {
+  min-height: 100vh;
+  background: white;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-and-title-wrapper {
+  display: flex;
+}
+.site-logo {
+  font-size: 6rem;
+}
+.site-name {
+  font-size: 3rem;
+  align-self: flex-end;
+}
+.site-navigation {
+  display: flex;
+}
+.site-navigation-link {
+  font-size: 2rem;
+}
+.site-navigation-icon {
+
+}
+.swiper-container {
+
+}
+.shop-navigation {
+
+}
+.shop-navigation-item {
+
+}
+.shop-navigation-title {
+
+}
+.footer {
+  background: #D2D2D2;
+}
+.footer-link {
+
+}
+.footer-icon {
+
+}
