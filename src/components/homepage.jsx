@@ -1,5 +1,17 @@
 import React from 'react';
 import styles from './homepage.module.scss'
+import contactIcon from '../assets/icons/contact-icon.svg'
+import signInIcon from '../assets/icons/sign-in-icon.svg'
+import shoppingCartIcon from '../assets/icons/shopping-cart-icon.svg'
+import clay from '../assets/images/clay-nav.jpg'
+import glaze from '../assets/images/glaze-nav.jpg'
+import tools from '../assets/images/tools-nav.jpg'
+import workshops from '../assets/images/workshops-nav.jpg'
+import devices from '../assets/images/devices-nav.jpg'
+import facebookIcon from '../assets/icons/facebook-icon.svg' 
+import mailIcon from '../assets/icons/mail-icon.svg'
+import mapIcon from '../assets/icons/map-icon.svg'
+import mobileIcon from '../assets/icons/mobile-icon.svg'
 
 const HomePage = () => (
   <>
@@ -11,25 +23,25 @@ const HomePage = () => (
         </div>
         <nav className={styles["site-navigation"]}>
           <a className={styles["site-navigation-link"]}>
-            <img className={styles["site-navigation-icon"]}></img>
+            <img src={contactIcon} className={styles["site-navigation-icon"]}></img>
             Contact
           </a>
           <a className={styles["site-navigation-link"]}>
-            <img className={styles["site-navigation-icon"]}></img>
+            <img src={signInIcon} className={styles["site-navigation-icon"]}></img>
             Sign in
           </a>
           <a className={styles["site-navigation-link"]}>
-            <img className={styles["site-navigation-icon"]}></img>
+            <img src={shoppingCartIcon} className={styles["site-navigation-icon"]}></img>
             My cart
           </a>
         </nav>
       </header>
-      <main>
-        <article>
+      <main className={styles['main-content-wrapper']}>
+        <article className={styles['main-content']}>
           {/* <!-- Slider main container --> */}
           <div class={styles["swiper-container"]}>
             {/* <!-- Additional required wrapper --> */}
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper">                                  
               {/* <!-- Slides --> */}
               <div class="swiper-slide">Slide 1</div>
               <div class="swiper-slide">Slide 2</div>
@@ -46,19 +58,19 @@ const HomePage = () => (
             <div class="swiper-scrollbar"></div>
           </div>
           <nav className={styles['shop-navigation']}>
-            <a className={styles['shop-navigation-item']} href="#">
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${clay})`}}>
               <h2 className={styles['shop-navigation-title']}>Glina</h2>
             </a>
-            <a className={styles['shop-navigation-item']} href="#">
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${glaze})`}}>
               <h2 className={styles['shop-navigation-title']}>Szkliwa</h2>
             </a>
-            <a className={styles['shop-navigation-item']} href="#">
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${tools})`}}>
               <h2 className={styles['shop-navigation-title']}>Warsztaty</h2>
             </a>
-            <a className={styles['shop-navigation-item']} href="#">
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${workshops})`}}>
               <h2 className={styles['shop-navigation-title']}>Narzędzia</h2>
             </a>
-            <a className={styles['shop-navigation-item']} href="#">
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${devices})`}}>
               <h2 className={styles['shop-navigation-title']}>Urządzenia</h2>
             </a>
           </nav>
@@ -66,33 +78,33 @@ const HomePage = () => (
       </main>
     </div>
     <footer className={styles["footer"]}>
-      <ul>
-        <li>
+      <ul className={styles["footer-list"]}>
+        <li className={styles["footer-list-item"]}>
           <a className={styles["footer-link"]}>
-            <img className={styles["footer-icon"]}></img>
+            <img src={mapIcon} className={styles["footer-icon"]}></img>
             Paweł Kleszcz <br/> ul. Wieńcowa 5/32 <br/> 93-390, Łódź
           </a>
         </li>
-        <li>
+        <li className={styles["footer-list-item"]}>
           <a className={styles["footer-link"]}>
-            <img className={styles["footer-icon"]}></img>
+            <img src={mobileIcon} className={styles["footer-icon"]}></img>
             600-500-400
           </a>
         </li>
-        <li>
-          <a className={styles["footer-link"]}>
+        <li className={styles["footer-list-item"]}>
+          <a className={styles["footer-link"], styles["footer-logo"]}>
             J&P
           </a>
         </li>
-        <li>
+        <li className={styles["footer-list-item"]}>
           <a className={styles["footer-link"]}>
-            <img className={styles["footer-icon"]}></img>
+            <img src={mailIcon} className={styles["footer-icon"]}></img>
             p.kleszcz@gmail.com
           </a>
         </li>
-        <li>
+        <li className={styles["footer-list-item"]}>
           <a className={styles["footer-link"]}>
-            <img className={styles["footer-icon"]}></img>
+            <img src={facebookIcon} className={styles["footer-icon"]}></img>
             facebook.com/j&p
           </a>
         </li>
