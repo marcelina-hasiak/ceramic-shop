@@ -65,36 +65,36 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
   font-size: 5rem;
-  filter: opacity(45%);
   &:first-child {
     font-size: 7rem;
-  }
-  &:first-child {
     grid-row: 1/-1;
   }
-  // &:hover {
-  //   filter:none;
-  // }
-  // &:hover .shop-navigation-title {
-  //   display: none;
-  // }
-  // &:hover ::after {
-  //   content: '';
-  //   position: absolute;
-  //   top:0;
-  //   left:0;
-  //   background-color: rgba($color: #ffffff, $alpha: 0.2);
-  //   width:100%;
-  //   height:100%
-  // }
+  &:hover {
+    & .shop-navigation-overlay {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    & .shop-navigation-title {
+      opacity: 0;
+    }
+  }
+
+}
+.shop-navigation-overlay {
+  background-color: rgba(255, 255, 255, 0.45);
+  grid-column: 1;
+  grid-row: 1;
+  transition: .6s;
 }
 .shop-navigation-title {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
   font-weight: 300;
   color: #505050;
+  transition: .4s;
 }
 .footer {
   background: #D2D2D2;

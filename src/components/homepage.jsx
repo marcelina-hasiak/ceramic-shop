@@ -58,19 +58,24 @@ const HomePage = () => (
             <div class="swiper-scrollbar"></div>
           </div>
           <nav className={styles['shop-navigation']}>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${clay})`}}>
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${clay})`}}>
+              <div className={styles['shop-navigation-overlay']}></div>
               <h2 className={styles['shop-navigation-title']}>Glina</h2>
             </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${glaze})`}}>
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${glaze})`}}>
+              <div className={styles['shop-navigation-overlay']}></div>
               <h2 className={styles['shop-navigation-title']}>Szkliwa</h2>
             </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${tools})`}}>
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${tools})`}}>
+              <div className={styles['shop-navigation-overlay']}></div>
               <h2 className={styles['shop-navigation-title']}>Warsztaty</h2>
             </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${workshops})`}}>
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${workshops})`}}>
+              <div className={styles['shop-navigation-overlay']}></div>
               <h2 className={styles['shop-navigation-title']}>Narzędzia</h2>
             </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`linear-gradient(rgb(255 255 255 / 45%), rgb(255 255 255 / 45%)),url(${devices})`}}>
+            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${devices})`}}>
+              <div className={styles['shop-navigation-overlay']}></div>
               <h2 className={styles['shop-navigation-title']}>Urządzenia</h2>
             </a>
           </nav>
