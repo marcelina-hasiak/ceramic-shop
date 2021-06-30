@@ -1,17 +1,13 @@
 import React from 'react';
 import styles from './homepage.module.scss'
-import contactIcon from '../assets/icons/contact-icon.svg'
-import signInIcon from '../assets/icons/sign-in-icon.svg'
-import shoppingCartIcon from '../assets/icons/shopping-cart-icon.svg'
-import clay from '../assets/images/clay-nav.jpg'
-import glaze from '../assets/images/glaze-nav.jpg'
-import tools from '../assets/images/tools-nav.jpg'
-import workshops from '../assets/images/workshops-nav.jpg'
-import devices from '../assets/images/devices-nav.jpg'
-import facebookIcon from '../assets/icons/facebook-icon.svg' 
-import mailIcon from '../assets/icons/mail-icon.svg'
-import mapIcon from '../assets/icons/map-icon.svg'
-import mobileIcon from '../assets/icons/mobile-icon.svg'
+import Navigation from '../../components/navigation/navigation.component';
+import contactIcon from '../../assets/icons/contact-icon.svg'
+import signInIcon from '../../assets/icons/sign-in-icon.svg'
+import shoppingCartIcon from '../../assets/icons/shopping-cart-icon.svg'
+import facebookIcon from '../../assets/icons/facebook-icon.svg' 
+import mailIcon from '../../assets/icons/mail-icon.svg'
+import mapIcon from '../../assets/icons/map-icon.svg'
+import mobileIcon from '../../assets/icons/mobile-icon.svg'
 
 const HomePage = () => (
   <>
@@ -57,28 +53,7 @@ const HomePage = () => (
             {/* <!-- If we need scrollbar --> */}
             <div class="swiper-scrollbar"></div>
           </div>
-          <nav className={styles['shop-navigation']}>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${clay})`}}>
-              <div className={styles['shop-navigation-overlay']}></div>
-              <h2 className={styles['shop-navigation-title']}>Glina</h2>
-            </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${glaze})`}}>
-              <div className={styles['shop-navigation-overlay']}></div>
-              <h2 className={styles['shop-navigation-title']}>Szkliwa</h2>
-            </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${tools})`}}>
-              <div className={styles['shop-navigation-overlay']}></div>
-              <h2 className={styles['shop-navigation-title']}>Warsztaty</h2>
-            </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${workshops})`}}>
-              <div className={styles['shop-navigation-overlay']}></div>
-              <h2 className={styles['shop-navigation-title']}>Narzędzia</h2>
-            </a>
-            <a className={styles['shop-navigation-item']} style={{backgroundImage:`url(${devices})`}}>
-              <div className={styles['shop-navigation-overlay']}></div>
-              <h2 className={styles['shop-navigation-title']}>Urządzenia</h2>
-            </a>
-          </nav>
+          <Navigation/>
         </article>
       </main>
     </div>

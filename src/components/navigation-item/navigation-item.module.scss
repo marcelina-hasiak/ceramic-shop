@@ -1,0 +1,36 @@
+.shop-navigation-item {
+  position: relative;
+  text-decoration: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  font-size: 5rem;
+  &:first-child {
+    font-size: 7rem;
+    grid-row: 1/-1;
+  }
+  &:hover {
+    & .shop-navigation-overlay {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    & .shop-navigation-title {
+      opacity: 0;
+    }
+  }
+}
+.shop-navigation-overlay {
+  background-color: rgba(255, 255, 255, 0.45);
+  grid-column: 1;
+  grid-row: 1;
+  transition: .6s;
+}
+.shop-navigation-title {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+  font-weight: 300;
+  color: #505050;
+  transition: .4s;
+}
