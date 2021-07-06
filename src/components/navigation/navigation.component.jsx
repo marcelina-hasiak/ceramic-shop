@@ -12,23 +12,28 @@ class Navigation extends React.Component {
     shopNavigationItems: [
       {
         title: 'clay',
-        bgImage: clay
+        bgImage: clay,
+        slug: '/clay'
       },
       {
         title: 'glaze',
-        bgImage: glaze
+        bgImage: glaze,
+        slug: '/glaze'
       },
       {
         title: 'tools',
-        bgImage: tools
+        bgImage: tools,
+        slug: '/tools'
       },
       {
         title: 'workshops',
-        bgImage: workshops
+        bgImage: workshops,
+        slug: '/workshops'
       },
       {
         title: 'devices',
-        bgImage: devices
+        bgImage: devices,
+        slug: '/devices'
       }
     ]
   }
@@ -36,8 +41,8 @@ class Navigation extends React.Component {
     return (
       <nav className={styles['shop-navigation']}> 
       {
-        this.state.shopNavigationItems.map(({title, bgImage}, id) => (
-          <NavigationItem title={title} bgImage={bgImage} key={id}/>
+        this.state.shopNavigationItems.map((item, id) => (
+          <NavigationItem key={id} {...item}/>
         ))
       }
     </nav>
