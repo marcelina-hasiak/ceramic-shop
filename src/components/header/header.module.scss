@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  max-height: 110px;
+}
+.logo-and-title-wrapper {
+  display: flex;
+}
+.site-logo {
+  font-size: 5rem;
+  color: #505050;
+}
+.site-name {
+  font-size: 3rem;
+  align-self: center;
+  margin-left: 1rem;
+}
+.site-navigation {
+  display: flex;
+}
+.site-navigation-link {
+  font-size: 2rem;
+  margin-right: 2rem;
+  &:last-child {
+    margin-right: 0rem;
+  }
+}
+.site-navigation-icon {
+  width: 30px;
+  margin-right: .5rem;
+}

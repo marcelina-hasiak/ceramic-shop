@@ -10,11 +10,14 @@
 
 body {
   font-family: 'Amatic SC', 'Open sans', Verdana, Tahoma, sans-serif;
-  
+  color: #505050;
 }
 
 h1 {
   margin: 0;
   font-weight: 400;
-  color: #505050;
+  
+}
+a {
+  text-decoration: none;
 }
