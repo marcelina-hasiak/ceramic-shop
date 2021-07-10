@@ -1,42 +1,41 @@
-import SIBELCO_ATELIERMASSE from '../../assets/glina/images/glina-sibelco-ateliermasse-biala-w4005.jpg'
+import SIBELCO_ATELIERMASSE from '../../assets/images/glina/glina-sibelco-ateliermasse-biala-w4005.jpg'
 import SIBELCO_K144 from '../../assets/images/glina/glina-sibelco-k144.jpg'
 import SIBELCO_K3020 from '../../assets/images/glina/glina-sibelco-k3020.jpg'
 import SIBELCO_TERRA_NIGRA from '../../assets/images/glina/glina-sibelco-terra-nigra.jpg'
 import SIBELCO_TERRAZZO_ROT from '../../assets/images/glina/glina-sibelco-terrazzo-rot.jpg'
 import SIBELCO_WMS_2002GG from '../../assets/images/glina/glina-sibelco-wms-2002gg.jpg'
 import SIBELCO_WMS_2005GG from '../../assets/images/glina/glina-sibelco-wms-2005gg.jpg'
-import SIBELCO_BETONGRAU from '../../assets/images/glina/glina-silbeco-betongrau.jpg'
+import SIBELCO_BETONGRAU from '../../assets/images/glina/glina-sibelco-betongrau.jpg'
 
-import BOTZ_FIOLKOWY from '../../assets/images/szkliwo/szkliwo-botz-fiolkowy'
-import BOTZ_MAJOWY_DESZCZ from '../../assets/images/szkliwo/szkliwo-botz-majowy-deszcz'
-import BOTZ_NIEBIESKIE_ORIENTALNE from '../../assets/images/szkliwo/szkliwo-botz-niebieskie-orientalne'
-import TERRACOLOR_CYTRYNA from '../../assets/images/szkliwo/szkliwo-terracolor-cytryna'
-import TERRACOLOR_CZERWONY_ZAR from '../../assets/images/szkliwo/szkliwo-terracolor-czerwony-zar'
-import TERRACOLOR_KREMOWE from '../../assets/images/szkliwo/szkliwo-terracolor-kremowe'
-import TERRACOLOR_NIEBIESKA_KUKURYDZA from '../../assets/images/szkliwo/szkliwo-terracolor-niebieska-kukurydza'
-import TERRACOLOR_PLAMISTA_ZIELEN from '../../assets/images/szkliwo/szkliwo-terracolor-plamista-zielen'
-import TERRACOLOR_RAJSKI_PTAK from '../../assets/images/szkliwo/szkliwo-terracolor-rajski-ptak'
-import TERRACOLOR_ZIELONE_KRYSZTALY from '../../assets/images/szkliwo/szkliwo-terracolor-zielone-krysztaly'
-import TERRACOLOR_ZIELONY_GRYNSZPAN from '../../assets/images/szkliwo/szkliwo-terracolor-zielony-grynszpan'
+import BOTZ_FIOLKOWY from '../../assets/images/szkliwo/szkliwo-botz-fiolkowy.jpg'
+import BOTZ_MAJOWY_DESZCZ from '../../assets/images/szkliwo/szkliwo-botz-majowy-deszcz.jpg'
+import BOTZ_NIEBIESKIE_ORIENTALNE from '../../assets/images/szkliwo/szkliwo-botz-niebieskie-orientalne.jpg'
+import TERRACOLOR_CYTRYNA from '../../assets/images/szkliwo/szkliwo-terracolor-cytryna.jpg'
+import TERRACOLOR_CZERWONY_ZAR from '../../assets/images/szkliwo/szkliwo-terracolor-czerwony-zar.jpg'
+import TERRACOLOR_KREMOWE from '../../assets/images/szkliwo/szkliwo-terracolor-kremowe.jpg'
+import TERRACOLOR_NIEBIESKA_KUKURYDZA from '../../assets/images/szkliwo/szkliwo-terracolor-niebieska-kukurydza.jpg'
+import TERRACOLOR_PLAMISTA_ZIELEN from '../../assets/images/szkliwo/szkliwo-terracolor-plamista-zielen.jpg'
+import TERRACOLOR_RAJSKI_PTAK from '../../assets/images/szkliwo/szkliwo-terracolor-rajski-ptak.jpg'
+import TERRACOLOR_ZIELONE_KRYSZTALY from '../../assets/images/szkliwo/szkliwo-terracolor-zielone-krysztaly.jpg'
+import TERRACOLOR_ZIELONY_GRYNSZPAN from '../../assets/images/szkliwo/szkliwo-terracolor-zielony-grynszpan.jpg'
 
-import WYKROJNIK_OTWOROW_8MM from '../../assets/images/narzedzia/narzedzia-wykrojnik-otworow-8mm'
-import OCZKO_DWUSTRONNE from '../../assets/images/narzedzia/narzedzia-oczko-dwustronne'
-import PEDZLE_BRODA_KOZIA from '../../assets/images/narzedzia/narzedzia-pedzel-broda-kozia'
-import TOCZEK_METALOWY_WYSOKI from '../../assets/images/narzedzia/narzedzia-toczek-metalowy-wysoki'
-import CYKLINA_SILIKONOWA_MIEKKA from '../../assets/images/narzedzia/narzedzia-cyklina-silikonowa-miekka'
+import WYKROJNIK_OTWOROW_8MM from '../../assets/images/narzedzia/narzedzia-wykrojnik-otworow-8mm.jpg'
+import OCZKO_DWUSTRONNE from '../../assets/images/narzedzia/narzedzia-oczko-dwustronne.jpg'
+import PEDZLE_BRODA_KOZIA from '../../assets/images/narzedzia/narzedzia-pedzel-broda-kozia.jpg'
+import TOCZEK_METALOWY_WYSOKI from '../../assets/images/narzedzia/narzedzia-toczek-metalowy-wysoki.jpg'
+import CYKLINA_SILIKONOWA_MIEKKA from '../../assets/images/narzedzia/narzedzia-cyklina-silikonowa-miekka.jpg'
 
-import WARSZTATY_DLA_DZIECI from '../../assets/images/warsztaty/warsztaty-dla-dzieci'
-import WARSZTATY_I_STOPNIA from '../../assets/images/warsztaty/warsztaty-I-stopnia'
-import WARSZTATY_II_STOPNIA from '../../assets/images/warsztaty/warsztaty-II-stopnia'
-import WARSZTATY_III_STOPNIA from '../../assets/images/warsztaty/warsztaty-III-stopnia'
+import WARSZTATY_DLA_DZIECI from '../../assets/images/warsztaty/warsztaty-dla-dzieci.jpeg'
+import WARSZTATY_I_STOPNIA from '../../assets/images/warsztaty/warsztaty-I-stopnia.jpeg'
+import WARSZTATY_II_STOPNIA from '../../assets/images/warsztaty/warsztaty-II-stopnia.jpeg'
+import WARSZTATY_III_STOPNIA from '../../assets/images/warsztaty/warsztaty-III-stopnia.jpeg'
 
-import ROHDE_WALCARKA_DO_GLINY_PW_600 from '../../assets/images/urzadzenia/rohde-walcarka-do-gliny-pw-600'
-import SHIMPO_KOLO_GARNCARSKIE_RK55 from '../../assets/images/urzadzenia/shimpo-kolo-garncarskie-rk55'
-import SHIMPO_MIESZARKA_DO_GLINY_NRA_04S from '../../assets/images/urzadzenia/shimpo-mieszarka-do-gliny-nra-04s'
-import KOMORA_NATRYSKOWA_DO_SZKLIWIENIA from '../../assets/images/urzadzenia/komora-natryskowa-do-szkliwienia'
+import ROHDE_WALCARKA_DO_GLINY_PW_600 from '../../assets/images/urzadzenia/rohde-walcarka-do-gliny-pw-600.jpg'
+import SHIMPO_KOLO_GARNCARSKIE_RK55 from '../../assets/images/urzadzenia/shimpo-kolo-garncarskie-rk55.jpg'
+import SHIMPO_MIESZARKA_DO_GLINY_NRA_04S from '../../assets/images/urzadzenia/shimpo-mieszarka-do-gliny-nra-04s.jpg'
+import KOMORA_NATRYSKOWA_DO_SZKLIWIENIA from '../../assets/images/urzadzenia/komora-natryskowa-do-szkliwienia.jpg'
 
-
-export const SHOP_PRODUCTS_DATA = [
+const SHOP_PRODUCTS_DATA = [
   {
     id: 1,
     title: 'Glina',
@@ -265,3 +264,5 @@ export const SHOP_PRODUCTS_DATA = [
     ]
   }
 ]
+
+export default SHOP_PRODUCTS_DATA

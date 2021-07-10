@@ -4,15 +4,10 @@ import Navigation from '../../components/navigation/navigation.component';
 
 
 const HomePage = () => (
-  <main className={styles['main-content-wrapper']}>
-    <article className={styles['main-content']}>
-      {/* <!-- Slider main container --> */}
-      <div className={styles["swiper-container"]}>
-        {/* <!-- Additional required wrapper --> */}
-      </div>
-      <Navigation/>
-    </article>
-  </main>
+  <>
+    <div className={styles["swiper-container"]}/>
+    <Navigation/>
+  </>
 )
 
 export default HomePage
