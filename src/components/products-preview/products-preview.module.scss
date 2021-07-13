@@ -1,0 +1,13 @@
+.products-wrapper {
+margin-bottom: 3rem;
+}
+.products-title {
+ font-size: 2rem;
+ color: #9b9b9b;
+ font-weight: 300;
+}
+.product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}

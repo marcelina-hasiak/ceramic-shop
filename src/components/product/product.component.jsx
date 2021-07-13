@@ -3,10 +3,10 @@ import styles from './product.module.scss'
 
 const Product = ({name, imageSrc, price}) => (
   <article className={styles["product-wrapper"]}>
-    <img src={imageSrc}></img>
-    <div>
-      <h3>{name}</h3>
-      <p>{price}</p>
+    <img className={styles["product-image"]} src={imageSrc}></img>
+    <div className={styles["product-details"]}>
+      <h3 className={styles["product-title"]}>{name}</h3>
+      <p className={styles["product-price"]}>{price}zł</p>
     </div>
   </article>
 )

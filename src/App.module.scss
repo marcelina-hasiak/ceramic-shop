@@ -4,3 +4,13 @@
   display: flex;
   flex-direction: column;
 }
+.main-content-wrapper {
+  flex: 1;
+  display: flex;
+  padding: 0 1rem;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
