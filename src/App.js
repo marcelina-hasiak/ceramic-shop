@@ -7,7 +7,8 @@ import {
 import HomePage from './pages/homepage/homepage.component'
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
-import ShopPage from './pages/shopPage/shopPage.component';
+import ShopPage from './pages/shop/shop.component';
+import SignInAndSignUpPage from './pages/sign-in-and-sing-up/sign-in-and-sing-up.component'
 
 const ClayPage = () => (
   <div>
@@ -63,6 +64,9 @@ function App() {
               </Route>
               <Route path='/sklep'>
                 <ShopPage/>
+              </Route>
+              <Route path='/logowanie'>
+                <SignInAndSignUpPage/>
               </Route>
             </Switch>
           </section>
