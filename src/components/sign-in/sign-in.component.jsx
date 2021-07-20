@@ -9,6 +9,7 @@ class SignIn extends React.Component {
     email: '',
     password: '',
   }
+
   handleSubmit = (event) => {
     event.preventdefault()
   }
@@ -24,8 +25,8 @@ class SignIn extends React.Component {
     const { email, password } = this.state
     return (
       <>
-        <h2>Posiadam już konto</h2>
-        <span>Zaloguj się za pomocą swojego maila i hasła</span>
+        <h2 className={styles['form-title']}>Posiadam już konto</h2>
+        <span className={styles['form-subtitle']}>Zaloguj się za pomocą swojego maila i hasła</span>
         <form onSubmit={this.handleSubmit} className={styles['form']}>
           {/* reduce number of string prop? */}
           <Input 

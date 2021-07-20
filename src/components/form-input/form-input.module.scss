@@ -1,0 +1,33 @@
+.input-wrapper {
+  margin-bottom: 3rem;
+  position: relative;
+  &:focus-within .label {
+    font-size: 1rem;
+    transform: translateY(-20px);
+  }
+}
+
+.label {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: .3s ease-in-out;
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.input {
+  border: none;
+  border-bottom: 1px solid #505050;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  padding-bottom: .1rem;
+  
+  width: 100%;
+  &:focus {
+    outline: none;
+  }
+
+}
+
