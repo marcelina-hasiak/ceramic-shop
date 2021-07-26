@@ -10,6 +10,7 @@
   z-index: 1;
   cursor: pointer;
   transition: 0.6s ease-in-out;
+  white-space: nowrap;
   &::before {
     content: '';
     position: absolute;
@@ -28,6 +29,19 @@
     &::before {
       transform: scaleX(1);
     }
+  }
+  &.google-button {
+    
+    margin-left: 1rem;
+    &::before {
+      background: #f8f8f8;
+      transform: scaleX(1);
+    }
+    &:hover::before {
+      background: #f14e4e;
+      transform: none;
+    }
+
   }
 
 }

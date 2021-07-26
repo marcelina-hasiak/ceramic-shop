@@ -1,4 +1,5 @@
 import styles from './App.module.scss';
+import React from 'react';
 import {
   Switch,
   Route
@@ -9,6 +10,7 @@ import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sing-up/sign-in-and-sing-up.component'
+import {auth} from './firebase/firebase.utils'
 
 const ClayPage = () => (
   <div>
@@ -36,13 +38,30 @@ const DevicesPage = () => (
   </div>
 )
 
-function App() {
-  return (
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = { currentUser: '' };
+  }
+
+  componentDidMount() {
+    this.unsubscribe = auth.onAuthStateChanged(user => {
+      this.setState({currentUser: user})
+    });
+  }
+  componentWillUnmount(){
+    this.unsubscribe()
+  }
+
+  render() { 
+    const {currentUser} = this.state
+    return (
     <>
       <div className={styles['header-and-main-content-wrapper']}>
-        <Header/>
+        <Header isLogged= {currentUser}/>
         <main className={styles['main-content-wrapper']}>
-          <section className={styles['main-content']}>
+          <section onClick={() => console.log(this.state.currentUser)} className={styles['main-content']}>
             <Switch>
               <Route exact path='/'>
                 <HomePage/>
@@ -74,7 +93,8 @@ function App() {
       </div>
       <Footer/>
     </>
-  );
+    );
+  }
 }
 
 export default App;
