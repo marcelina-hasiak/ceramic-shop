@@ -10,7 +10,7 @@ import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sing-up/sign-in-and-sing-up.component'
-import {auth} from './firebase/firebase.utils'
+import {saveUserInDB, auth} from './firebase/firebase.utils'
 
 const ClayPage = () => (
   <div>
@@ -46,8 +46,20 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.unsubscribe = auth.onAuthStateChanged(user => {
-      this.setState({currentUser: user})
+    this.unsubscribe = auth.onAuthStateChanged(async user => {
+      if (user) {
+        const userRef = await saveUserInDB(user)
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          }) 
+        })
+      } else {
+        this.setState({currentUser: null})
+      }
     });
   }
   componentWillUnmount(){
@@ -61,7 +73,7 @@ class App extends React.Component {
       <div className={styles['header-and-main-content-wrapper']}>
         <Header isLogged= {currentUser}/>
         <main className={styles['main-content-wrapper']}>
-          <section onClick={() => console.log(this.state.currentUser)} className={styles['main-content']}>
+          <section className={styles['main-content']}>
             <Switch>
               <Route exact path='/'>
                 <HomePage/>
