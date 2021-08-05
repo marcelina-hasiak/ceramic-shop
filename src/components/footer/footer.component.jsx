@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link
+} from "react-router-dom";
 import styles from './footer.module.scss'
 
 import facebookIcon from '../../assets/icons/facebook-icon.svg' 
@@ -10,33 +13,33 @@ const Footer = () => (
   <footer className={styles["footer"]}>
     <ul className={styles["footer-list"]}>
       <li className={styles["footer-list-item"]}>
-        <a className={styles["footer-link"]}>
-          <img src={mapIcon} className={styles["footer-icon"]}></img>
-          Paweł Kleszcz <br/> ul. Wieńcowa 5/32 <br/> 93-390, Łódź
-        </a>
+        <Link to='' className={styles["footer-link"]}>
+          <img src={mapIcon} className={styles["footer-icon"]} alt=""></img>
+          Paweł Kleszcz <br/> ul. Wiankowa 5/32 <br/> 93-390, Łódź
+        </Link>
       </li>
       <li className={styles["footer-list-item"]}>
-        <a className={styles["footer-link"]}>
-          <img src={mobileIcon} className={styles["footer-icon"]}></img>
+        <Link to='' className={styles["footer-link"]}>
+          <img src={mobileIcon} className={styles["footer-icon"]} alt=""></img>
           600-500-400
-        </a>
+        </Link>
       </li>
       <li className={styles["footer-list-item"]}>
-        <a className={styles["footer-link"], styles["footer-logo"]}>
+        <Link to='' className={`${styles["footer-link"]} ${styles["footer-logo"]}`}>
           J&P
-        </a>
+        </Link>
       </li>
       <li className={styles["footer-list-item"]}>
-        <a className={styles["footer-link"]}>
-          <img src={mailIcon} className={styles["footer-icon"]}></img>
+        <Link to='' className={styles["footer-link"]}>
+          <img src={mailIcon} className={styles["footer-icon"]} alt=""></img>
           p.kleszcz@gmail.com
-        </a>
+        </Link>
       </li>
       <li className={styles["footer-list-item"]}>
-        <a className={styles["footer-link"]}>
-          <img src={facebookIcon} className={styles["footer-icon"]}></img>
+        <Link to='' className={styles["footer-link"]}>
+          <img src={facebookIcon} className={styles["footer-icon"]} alt=""></img>
           facebook.com/j&p
-        </a>
+        </Link>
       </li>
     </ul>
   </footer>

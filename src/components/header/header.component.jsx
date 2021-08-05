@@ -19,25 +19,25 @@ const Header = ({isLogged}) => (
     </div>
     <nav className={styles["site-navigation"]}>
       <Link to='' className={styles["site-navigation-link"]}>
-        <img src={contactIcon} className={styles["site-navigation-icon"]}></img>
+        <img src={contactIcon} className={styles["site-navigation-icon"]} alt=""></img>
         Contact
       </Link>
       { isLogged 
         ? (
           <Link onClick={() => auth.signOut()} to='/' className={styles["site-navigation-link"]}>
-            <img src={signOutIcon} className={styles["site-navigation-icon"]}></img>
+            <img src={signOutIcon} className={styles["site-navigation-icon"]} alt=""></img>
             Sign out
           </Link>
         ) 
         : (
           <Link to='/logowanie' className={styles["site-navigation-link"]}>
-            <img src={signInIcon} className={styles["site-navigation-icon"]}></img>
+            <img src={signInIcon} className={styles["site-navigation-icon"]} alt=""></img>
             Sign in
           </Link>
         )
       }
       <Link to='' className={styles["site-navigation-link"]}>
-        <img src={shoppingCartIcon} className={styles["site-navigation-icon"]}></img>
+        <img src={shoppingCartIcon} className={styles["site-navigation-icon"]} alt=""></img>
         My cart
       </Link>
     </nav>
