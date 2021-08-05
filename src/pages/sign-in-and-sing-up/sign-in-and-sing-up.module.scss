@@ -1,9 +1,11 @@
 .forms-wrapper {
   display: flex;
-  padding-top: 6vh;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .form-wrapper {
   display: flex;
   flex-direction: column;
+  width: 460px;
 }
