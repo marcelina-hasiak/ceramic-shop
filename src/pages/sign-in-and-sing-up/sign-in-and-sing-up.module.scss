@@ -1,11 +1,12 @@
 .forms-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  min-width: 70vw;
 }
 
 .form-wrapper {
   display: flex;
   flex-direction: column;
-  width: 460px;
+  width: 520px;
 }

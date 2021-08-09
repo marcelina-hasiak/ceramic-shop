@@ -36,7 +36,7 @@ class SignUp extends React.Component {
           <Input 
             handleChange={this.handleChange}
             value={displayName} 
-            label="displayName"
+            label="nazwa"
             labelFor="display name"
             type="text" 
             name="displayName" 
@@ -56,7 +56,7 @@ class SignUp extends React.Component {
           <Input
             handleChange={this.handleChange}
             value={password}
-            label="password"
+            label="hasło"
             labelFor="password"
             type="password"
             name="password"
@@ -66,14 +66,14 @@ class SignUp extends React.Component {
           <Input
             handleChange={this.handleChange}
             value={confirmPassword}
-            label="confirm password"
+            label="potwierdzenie hasła"
             labelFor="confirmPassword"
             type="password"
             name="confirmPassword"
             id="confirmPassword"
             required
           />
-          <CustomButton type="submit">Sign up</CustomButton>
+          <CustomButton type="submit">Utwórz konto</CustomButton>
         </form>
       </>
     )
