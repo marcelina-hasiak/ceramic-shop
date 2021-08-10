@@ -24,6 +24,7 @@ const Header = ({isLogged}) => (
       </Link>
       { isLogged 
         ? (
+          // move signOut function to another and handle the response
           <Link onClick={() => auth.signOut()} to='/' className={styles["site-navigation-link"]}>
             <img src={signOutIcon} className={styles["site-navigation-icon"]} alt=""></img>
             Sign out

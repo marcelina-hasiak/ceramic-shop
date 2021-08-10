@@ -19,21 +19,26 @@ provider.setCustomParameters({prompt: 'select_account'})
 export const auth = firebase.auth()
 export const firestore = firebase.firestore()
 
-export const saveUserInDB = async (userAuth) => {
+export const saveUserInDB = async (userAuth, additionalData) => {
+  if(!userAuth) return;
+
   const documentRef = firestore.doc(`users/${userAuth.uid}`)
   const snapshot = await documentRef.get()
+
   if (!snapshot.exists) {
     const {displayName, email} = userAuth
     try {
       documentRef.set({
         displayName,
         email,
-        timeStamp: new Date()
+        timeStamp: new Date(),
+        ...additionalData
       })
     } catch (error) {
       console.log('Error has occured during user saving', error)
     }
-  }
+  } 
+
   return documentRef
 }
 

@@ -49,19 +49,21 @@ class App extends React.Component {
     this.unsubscribe = auth.onAuthStateChanged(async user => {
       if (user) {
         const userRef = await saveUserInDB(user)
+        
         userRef.onSnapshot(snapShot => {
           this.setState({
             currentUser: {
               id: snapShot.id,
               ...snapShot.data()
             }
-          }) 
+          }, () => console.log(this.state)) 
         })
       } else {
         this.setState({currentUser: null})
       }
     });
   }
+
   componentWillUnmount(){
     this.unsubscribe()
   }
