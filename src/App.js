@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { Provider } from 'react-redux'
 
 import HomePage from './pages/homepage/homepage.component'
 import Header from './components/header/header.component';
@@ -72,39 +73,41 @@ class App extends React.Component {
     const {currentUser} = this.state
     return (
     <>
-      <div className={styles['header-and-main-content-wrapper']}>
-        <Header isLogged= {currentUser}/>
-        <main className={styles['main-content-wrapper']}>
-          <section className={styles['main-content']}>
-            <Switch>
-              <Route exact path='/'>
-                <HomePage/>
-              </Route>
-              <Route path='/glina'>
-                <ClayPage/>
-              </Route>
-              <Route path='/szkliwo'>
-                <GlazePage/>
-              </Route>
-              <Route path='/narzedzia'>
-                <ToolsPage/>
-              </Route>
-              <Route path='/warsztaty'>
-                <WorkshopsPage/>
-              </Route>
-              <Route path='/urzadzenia'>
-                <DevicesPage/>
-              </Route>
-              <Route path='/sklep'>
-                <ShopPage/>
-              </Route>
-              <Route path='/logowanie'>
-                <SignInAndSignUpPage/>
-              </Route>
-            </Switch>
-          </section>
-        </main>
-      </div>
+      <Provider store={store}>
+        <div className={styles['header-and-main-content-wrapper']}>
+          <Header isLogged= {currentUser}/>
+          <main className={styles['main-content-wrapper']}>
+            <section className={styles['main-content']}>
+              <Switch>
+                <Route exact path='/'>
+                  <HomePage/>
+                </Route>
+                <Route path='/glina'>
+                  <ClayPage/>
+                </Route>
+                <Route path='/szkliwo'>
+                  <GlazePage/>
+                </Route>
+                <Route path='/narzedzia'>
+                  <ToolsPage/>
+                </Route>
+                <Route path='/warsztaty'>
+                  <WorkshopsPage/>
+                </Route>
+                <Route path='/urzadzenia'>
+                  <DevicesPage/>
+                </Route>
+                <Route path='/sklep'>
+                  <ShopPage/>
+                </Route>
+                <Route path='/logowanie'>
+                  <SignInAndSignUpPage/>
+                </Route>
+              </Switch>
+            </section>
+          </main>
+        </div>
+      </Provider>
       <Footer/>
     </>
     );
