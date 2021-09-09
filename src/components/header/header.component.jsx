@@ -4,6 +4,7 @@ import {
   Link
 } from "react-router-dom";
 import {auth} from '../../firebase/firebase.utils'
+import { connect } from 'react-redux'
 
 import contactIcon from '../../assets/icons/contact-icon.svg'
 import signInIcon from '../../assets/icons/sign-in-icon.svg'
@@ -11,7 +12,7 @@ import signOutIcon from '../../assets/icons/sign-out-icon.svg'
 import shoppingCartIcon from '../../assets/icons/shopping-cart-icon.svg'
 
 
-const Header = ({isLogged}) => (
+const Header = ({currentUser}) => (
   <header className={styles["header"]}>
     <div className={styles["logo-and-title-wrapper"]}>
       <Link to="/" className={styles["site-logo"]}>J&P</Link>
@@ -22,7 +23,7 @@ const Header = ({isLogged}) => (
         <img src={contactIcon} className={styles["site-navigation-icon"]} alt=""></img>
         Contact
       </Link>
-      { isLogged 
+      { currentUser 
         ? (
           // move signOut function to another and handle the response
           <Link onClick={() => auth.signOut()} to='/' className={styles["site-navigation-link"]}>
@@ -45,4 +46,10 @@ const Header = ({isLogged}) => (
   </header>
 )
 
-export default Header
+const mapStateToProps = state => {
+  return {
+    currentUser: state.user.currentUser
+  }
+}
+
+export default connect(mapStateToProps)(Header)

@@ -4,8 +4,9 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import { Provider } from 'react-redux'
-import { store } from './redux/store'
+
+import { connect } from 'react-redux'
+import { setCurrentUser } from './redux/user/user.action';
 
 import HomePage from './pages/homepage/homepage.component'
 import Header from './components/header/header.component';
@@ -41,78 +42,75 @@ const DevicesPage = () => (
 )
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = { currentUser: '' };
-  }
 
   componentDidMount() {
-    this.unsubscribe = auth.onAuthStateChanged(async user => {
-      if (user) {
-        const userRef = await saveUserInDB(user)
+    const {setCurrentUser} = this.props
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userRef = await saveUserInDB(userAuth)
         
         userRef.onSnapshot(snapShot => {
-          this.setState({
-            currentUser: {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
-          }, () => console.log(this.state)) 
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data()
+          }) 
         })
       } else {
-        this.setState({currentUser: null})
+        setCurrentUser(userAuth)
       }
     });
   }
 
   componentWillUnmount(){
-    this.unsubscribe()
+    this.unsubscribeFromAuth()
   }
 
   render() { 
-    const {currentUser} = this.state
     return (
     <>
-      <Provider store={store}>
-        <div className={styles['header-and-main-content-wrapper']}>
-          <Header isLogged= {currentUser}/>
-          <main className={styles['main-content-wrapper']}>
-            <section className={styles['main-content']}>
-              <Switch>
-                <Route exact path='/'>
-                  <HomePage/>
-                </Route>
-                <Route path='/glina'>
-                  <ClayPage/>
-                </Route>
-                <Route path='/szkliwo'>
-                  <GlazePage/>
-                </Route>
-                <Route path='/narzedzia'>
-                  <ToolsPage/>
-                </Route>
-                <Route path='/warsztaty'>
-                  <WorkshopsPage/>
-                </Route>
-                <Route path='/urzadzenia'>
-                  <DevicesPage/>
-                </Route>
-                <Route path='/sklep'>
-                  <ShopPage/>
-                </Route>
-                <Route path='/logowanie'>
-                  <SignInAndSignUpPage/>
-                </Route>
-              </Switch>
-            </section>
-          </main>
-        </div>
-      </Provider>
+      <div className={styles['header-and-main-content-wrapper']}>
+        <Header/>
+        <main className={styles['main-content-wrapper']}>
+          <section className={styles['main-content']}>
+            <Switch>
+              <Route exact path='/'>
+                <HomePage/>
+              </Route>
+              <Route path='/glina'>
+                <ClayPage/>
+              </Route>
+              <Route path='/szkliwo'>
+                <GlazePage/>
+              </Route>
+              <Route path='/narzedzia'>
+                <ToolsPage/>
+              </Route>
+              <Route path='/warsztaty'>
+                <WorkshopsPage/>
+              </Route>
+              <Route path='/urzadzenia'>
+                <DevicesPage/>
+              </Route>
+              <Route path='/sklep'>
+                <ShopPage/>
+              </Route>
+              <Route path='/logowanie'>
+                <SignInAndSignUpPage/>
+              </Route>
+            </Switch>
+          </section>
+        </main>
+      </div>
       <Footer/>
     </>
     );
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    setCurrentUser: user => dispatch(setCurrentUser(user))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
