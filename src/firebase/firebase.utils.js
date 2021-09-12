@@ -20,8 +20,6 @@ export const auth = firebase.auth()
 export const firestore = firebase.firestore()
 
 export const saveUserInDB = async (userAuth, additionalData) => {
-  if(!userAuth) return;
-
   const documentRef = firestore.doc(`users/${userAuth.uid}`)
   const snapshot = await documentRef.get()
 
