@@ -19,10 +19,11 @@ class SignUp extends React.Component {
     const { displayName, email, password, confirmPassword } = this.state
     if (password !== confirmPassword) { 
       alert('Passwords need to be same')
+      return
     }
     try {
-      const userCredential = await auth.createUserWithEmailAndPassword(email, password)
-      await saveUserInDB(userCredential.user, {displayName})
+      const userCredentials = await auth.createUserWithEmailAndPassword(email, password)
+      await saveUserInDB(userCredentials.user, {displayName})
       this.setState({
         displayName: '',
         email: '',
