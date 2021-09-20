@@ -9,10 +9,11 @@ import { connect } from 'react-redux'
 import contactIcon from '../../assets/icons/contact-icon.svg'
 import signInIcon from '../../assets/icons/sign-in-icon.svg'
 import signOutIcon from '../../assets/icons/sign-out-icon.svg'
-import shoppingCartIcon from '../../assets/icons/shopping-cart-icon.svg'
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 
-const Header = ({currentUser}) => (
+const Header = ({currentUser, hidden}) => (
   <header className={styles["header"]}>
     <div className={styles["logo-and-title-wrapper"]}>
       <Link to="/" className={styles["site-logo"]}>J&P</Link>
@@ -38,17 +39,20 @@ const Header = ({currentUser}) => (
           </Link>
         )
       }
-      <Link to='' className={styles["site-navigation-link"]}>
-        <img src={shoppingCartIcon} className={styles["site-navigation-icon"]} alt=""></img>
-        My cart
+      <Link to='/sklep' className={styles["site-navigation-link"]}>
+        Sklep
       </Link>
+      <CartIcon/>
+      {hidden ? null : <CartDropdown/>}
+      
     </nav>
   </header>
 )
 
-const mapStateToProps = state => {
+const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => {
   return {
-    currentUser: state.user.currentUser
+    currentUser,
+    hidden
   }
 }
 
