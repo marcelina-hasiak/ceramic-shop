@@ -92,72 +92,72 @@ const SHOP_PRODUCTS_DATA = [
     ]
   },
   {
-    id: 2,
+    id: 9,
     title: 'Szkliwo',
     slug: 'szkliwo',
     items: [
       {
-        id: 1,
+        id: 10,
         name: 'Botz fiołkowy',
         imageSrc: BOTZ_FIOLKOWY,
         price: 42.30
       },
       {
-        id: 2,
+        id: 11,
         name: 'Botz majowy deszcz',
         imageSrc: BOTZ_MAJOWY_DESZCZ,
         price: 40
       },
       {
-        id: 3,
+        id: 12,
         name: 'Botz niebieskie orientalne',
         imageSrc: BOTZ_NIEBIESKIE_ORIENTALNE,
         price: 45
       },
       {
-        id: 4,
+        id: 13,
         name: 'Terracolor cytryna',
         imageSrc: TERRACOLOR_CYTRYNA,
         price: 36
       },
       {
-        id: 5,
+        id: 14,
         name: 'Terracolor czerwony zar',
         imageSrc: TERRACOLOR_CZERWONY_ZAR,
         price: 40
       },
       {
-        id: 6,
+        id: 15,
         name: 'Terracolor kremowe',
         imageSrc: TERRACOLOR_KREMOWE,
         price: 36
       },
       {
-        id: 7,
+        id: 16,
         name: 'Terracolor niebieska kukurydza',
         imageSrc: TERRACOLOR_NIEBIESKA_KUKURYDZA,
         price: 36
       },
       {
-        id: 8,
+        id: 17,
         name: 'Terracolor plamista zielen',
         imageSrc: TERRACOLOR_PLAMISTA_ZIELEN,
         price: 40
       },
       {
-        id: 9,
+        id: 18,
         name: 'Terracolor rajski ptak',
         imageSrc: TERRACOLOR_RAJSKI_PTAK,
         price: 46.50
       },
       {
-        id: 10,
+        id: 19,
         name: 'Terracolor zielone krysztaly',
         imageSrc: TERRACOLOR_ZIELONE_KRYSZTALY,
         price: 46.50
       },
       {
-        id: 11,
+        id: 20,
         name: 'Terracolor zielony grynszpan',
         imageSrc: TERRACOLOR_ZIELONY_GRYNSZPAN,
         price: 46.50
@@ -165,36 +165,36 @@ const SHOP_PRODUCTS_DATA = [
     ]
   },
   {
-    id: 3,
+    id: 21,
     title: 'Narzędzia',
     slug: 'narzedzia',
     items: [
       {
-        id: 1,
+        id: 22,
         name: 'Wykrojnik otworów 8mm',
         imageSrc: WYKROJNIK_OTWOROW_8MM,
         price: 17.30
       },
       {
-        id: 2,
+        id: 23,
         name: 'Oczko dwustronne',
         imageSrc: OCZKO_DWUSTRONNE,
         price: 90
       },
       {
-        id: 3,
+        id: 24,
         name: 'Pędzle z brody koziej',
         imageSrc: PEDZLE_BRODA_KOZIA,
         price: 45
       },
       {
-        id: 4,
+        id: 25,
         name: 'Toczek metalowy wysoki',
         imageSrc: TOCZEK_METALOWY_WYSOKI,
         price: 156
       },
       {
-        id: 5,
+        id: 26,
         name: 'Cyklina silikonowa miękka',
         imageSrc: CYKLINA_SILIKONOWA_MIEKKA,
         price: 12.50
@@ -202,30 +202,30 @@ const SHOP_PRODUCTS_DATA = [
     ]
   },
   {
-    id: 4,
+    id: 27,
     title: 'Warsztaty',
     slug: 'warsztaty',
     items: [
       {
-        id: 1,
+        id: 28,
         name: 'Warsztaty dla dzieci',
         imageSrc: WARSZTATY_DLA_DZIECI,
         price: 80
       },
       {
-        id: 2,
+        id: 29,
         name: 'Warsztaty I stopnia',
         imageSrc: WARSZTATY_I_STOPNIA,
         price: 350
       },
       {
-        id: 3,
+        id: 30,
         name: 'Warsztaty II stopnia',
         imageSrc: WARSZTATY_II_STOPNIA,
         price: 400
       },
       {
-        id: 4,
+        id: 31,
         name: 'Warsztaty III stopnia',
         imageSrc: WARSZTATY_III_STOPNIA,
         price: 500
@@ -233,30 +233,30 @@ const SHOP_PRODUCTS_DATA = [
     ]
   },
   {
-    id: 5,
+    id: 32,
     title: 'Urządzenia',
     slug: 'urzadzenia',
     items: [
       {
-        id: 1,
+        id: 33,
         name: 'Rohde walcarka do gliny pw 600',
         imageSrc: ROHDE_WALCARKA_DO_GLINY_PW_600,
         price: 9150
       },
       {
-        id: 2,
+        id: 34,
         name: 'Shimpo kolo garncarskie rk55',
         imageSrc: SHIMPO_KOLO_GARNCARSKIE_RK55,
         price: 4890
       },
       {
-        id: 3,
+        id: 35,
         name: 'Shimpo mieszarka do gliny nra 04s',
         imageSrc: SHIMPO_MIESZARKA_DO_GLINY_NRA_04S,
         price: 19020
       },
       {
-        id: 4,
+        id: 36,
         name: 'Komora natryskowa do szkliwienia',
         imageSrc: KOMORA_NATRYSKOWA_DO_SZKLIWIENIA,
         price: 50100
