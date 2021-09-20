@@ -8,7 +8,7 @@ import { ReactComponent as ShoppingCartIcon } from '../../assets/icons/shopping-
 
 const CartIcon = ({setCartVisibility}) => {
   return (
-    <button onClick={ ()=>setCartVisibility() } className={styles["cart-icon-wrapper"]}>
+    <button onClick={setCartVisibility} className={styles["cart-icon-wrapper"]}>
       <ShoppingCartIcon className={styles["cart-icon"]}/>
       <span className={styles["items-counter"]}> 0 </span>
     </button>
