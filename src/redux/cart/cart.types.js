@@ -1,0 +1,4 @@
+export const CartActionTypes = {
+  CART_TOGGLE_VISIBILITY: 'CART_TOGGLE_VISIBILITY',
+  ADD_ITEM_TO_CART: 'ADD_ITEM_TO_CART'
+}
