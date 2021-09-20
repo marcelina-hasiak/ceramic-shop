@@ -1,0 +1,18 @@
+.cart-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+}
+
+.cart-icon {
+  width: 30px;
+  height:30px;
+  margin-right: .5rem;
+}
+
+.items-counter {
+  position: absolute;
+  font-size: 1rem;
+  bottom: 10px;
+}
