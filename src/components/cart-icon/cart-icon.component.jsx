@@ -6,17 +6,27 @@ import { setCartVisibility } from '../../redux/cart/cart.action'
 
 import { ReactComponent as ShoppingCartIcon } from '../../assets/icons/shopping-cart-icon.svg'
 
-const CartIcon = ({setCartVisibility}) => {
+const CartIcon = ({ setCartVisibility, quantity }) => {
   return (
-    <button onClick={setCartVisibility} className={styles["cart-icon-wrapper"]}>
-      <ShoppingCartIcon className={styles["cart-icon"]}/>
-      <span className={styles["items-counter"]}> 0 </span>
+    <button onClick={setCartVisibility} className={styles['cart-icon-wrapper']}>
+      <ShoppingCartIcon className={styles['cart-icon']} />
+      <span className={styles['items-counter']}> {quantity} </span>
     </button>
   )
 }
 
-const mapDispatchToProps = dispatch => ({
-  setCartVisibility: () => dispatch(setCartVisibility())
+const mapStateToProps = ({ cart: { cartItems } }) => {
+  return {
+    quantity: cartItems.reduce(
+      (accumulatedQuantity, cartItem) =>
+        accumulatedQuantity + cartItem.quantity,
+      0,
+    ),
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  setCartVisibility: () => dispatch(setCartVisibility()),
 })
 
-export default connect(null, mapDispatchToProps)(CartIcon)
+export default connect(mapStateToProps, mapDispatchToProps)(CartIcon)
