@@ -5,6 +5,10 @@ import {
 } from "react-router-dom";
 import {auth} from '../../firebase/firebase.utils'
 import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
+
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 import contactIcon from '../../assets/icons/contact-icon.svg'
 import signInIcon from '../../assets/icons/sign-in-icon.svg'
@@ -13,7 +17,7 @@ import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
 
-const Header = ({currentUser, hidden}) => (
+const Header = ({currentUser, hidden}) =>(
   <header className={styles["header"]}>
     <div className={styles["logo-and-title-wrapper"]}>
       <Link to="/" className={styles["site-logo"]}>J&P</Link>
@@ -22,20 +26,20 @@ const Header = ({currentUser, hidden}) => (
     <nav className={styles["site-navigation"]}>
       <Link to='' className={styles["site-navigation-link"]}>
         <img src={contactIcon} className={styles["site-navigation-icon"]} alt=""></img>
-        Contact
+        Kontakt
       </Link>
       { currentUser 
         ? (
           // move signOut function to another and handle the response
           <Link onClick={() => auth.signOut()} to='/' className={styles["site-navigation-link"]}>
             <img src={signOutIcon} className={styles["site-navigation-icon"]} alt=""></img>
-            Sign out
+            Wyloguj się
           </Link>
         ) 
         : (
           <Link to='/logowanie' className={styles["site-navigation-link"]}>
             <img src={signInIcon} className={styles["site-navigation-icon"]} alt=""></img>
-            Sign in
+            Zaloguj się
           </Link>
         )
       }
@@ -44,16 +48,13 @@ const Header = ({currentUser, hidden}) => (
       </Link>
       <CartIcon/>
       {hidden ? null : <CartDropdown/>}
-      
     </nav>
   </header>
 )
 
-const mapStateToProps = ({user: {currentUser}, cart: {hidden}}) => {
-  return {
-    currentUser,
-    hidden
-  }
-}
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
+})
 
 export default connect(mapStateToProps)(Header)

@@ -8,6 +8,7 @@ import {
 
 import { connect } from 'react-redux'
 import { setCurrentUser } from './redux/user/user.action';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 import HomePage from './pages/homepage/homepage.component'
 import Header from './components/header/header.component';
@@ -15,6 +16,7 @@ import Footer from './components/footer/footer.component';
 import ShopPage from './pages/shop/shop.component';
 import SignInAndSignUpPage from './pages/sign-in-and-sing-up/sign-in-and-sing-up.component'
 import {saveUserInDB, auth} from './firebase/firebase.utils'
+import CheckoutPage from './pages/checkout/checkout.component';
 
 const ClayPage = () => (
   <div>
@@ -98,6 +100,9 @@ class App extends React.Component {
               <Route exact path='/logowanie'>
                 {this.props.currentUser ? <Redirect to ="/"/> : <SignInAndSignUpPage/>}
               </Route>
+              <Route path='/kasa'>
+                <CheckoutPage/>
+              </Route>
             </Switch>
           </section>
         </main>
@@ -110,7 +115,7 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.user.currentUser
+    currentUser: selectCurrentUser(state)
   }
 }
 
