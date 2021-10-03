@@ -18,31 +18,31 @@ import SignInAndSignUpPage from './pages/sign-in-and-sing-up/sign-in-and-sing-up
 import {saveUserInDB, auth} from './firebase/firebase.utils'
 import CheckoutPage from './pages/checkout/checkout.component';
 
-const ClayPage = () => (
-  <div>
-    <h2>Glina</h2>
-  </div>
-)
-const GlazePage = () => (
-  <div>
-    <h2>Szkliwo</h2>
-  </div>
-)
-const ToolsPage = () => (
-  <div>
-    <h2>Narzędzia</h2>
-  </div>
-)
-const WorkshopsPage = () => (
-  <div>
-    <h2>Warsztaty</h2>
-  </div>
-)
-const DevicesPage = () => (
-  <div>
-    <h2>Urządzenia</h2>
-  </div>
-)
+// const ClayPage = () => (
+//   <div>
+//     <h2>Glina</h2>
+//   </div>
+// )
+// const GlazePage = () => (
+//   <div>
+//     <h2>Szkliwo</h2>
+//   </div>
+// )
+// const ToolsPage = () => (
+//   <div>
+//     <h2>Narzędzia</h2>
+//   </div>
+// )
+// const WorkshopsPage = () => (
+//   <div>
+//     <h2>Warsztaty</h2>
+//   </div>
+// )
+// const DevicesPage = () => (
+//   <div>
+//     <h2>Urządzenia</h2>
+//   </div>
+// )
 
 class App extends React.Component {
 
@@ -78,21 +78,6 @@ class App extends React.Component {
             <Switch>
               <Route exact path='/'>
                 <HomePage/>
-              </Route>
-              <Route path='/glina'>
-                <ClayPage/>
-              </Route>
-              <Route path='/szkliwo'>
-                <GlazePage/>
-              </Route>
-              <Route path='/narzedzia'>
-                <ToolsPage/>
-              </Route>
-              <Route path='/warsztaty'>
-                <WorkshopsPage/>
-              </Route>
-              <Route path='/urzadzenia'>
-                <DevicesPage/>
               </Route>
               <Route path='/sklep'>
                 <ShopPage/>
