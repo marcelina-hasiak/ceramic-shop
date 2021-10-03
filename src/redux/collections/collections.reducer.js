@@ -9,27 +9,27 @@ const INITIAL_STATE = {
     {
       title: 'clay',
       bgImage: clay,
-      slug: '/clay'
+      slug: '/sklep/glina'
     },
     {
       title: 'glaze',
       bgImage: glaze,
-      slug: '/glaze'
+      slug: '/sklep/szkliwo'
     },
     {
       title: 'tools',
       bgImage: tools,
-      slug: '/tools'
+      slug: '/sklep/narzedzia'
     },
     {
       title: 'workshops',
       bgImage: workshops,
-      slug: '/workshops'
+      slug: '/sklep/warsztaty'
     },
     {
       title: 'devices',
       bgImage: devices,
-      slug: '/devices'
+      slug: '/sklep/urzadzenia'
     }
   ]
 }
