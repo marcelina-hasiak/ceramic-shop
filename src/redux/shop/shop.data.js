@@ -35,8 +35,8 @@ import SHIMPO_KOLO_GARNCARSKIE_RK55 from '../../assets/images/urzadzenia/shimpo-
 import SHIMPO_MIESZARKA_DO_GLINY_NRA_04S from '../../assets/images/urzadzenia/shimpo-mieszarka-do-gliny-nra-04s.jpg'
 import KOMORA_NATRYSKOWA_DO_SZKLIWIENIA from '../../assets/images/urzadzenia/komora-natryskowa-do-szkliwienia.jpg'
 
-const SHOP_PRODUCTS_DATA = [
-  {
+const SHOP_PRODUCTS_DATA = {
+  glina: {
     id: 1,
     title: 'Glina',
     slug: 'glina',
@@ -91,7 +91,7 @@ const SHOP_PRODUCTS_DATA = [
       }
     ]
   },
-  {
+  szkliwo: {
     id: 9,
     title: 'Szkliwo',
     slug: 'szkliwo',
@@ -164,7 +164,7 @@ const SHOP_PRODUCTS_DATA = [
       }
     ]
   },
-  {
+  narzedzia: {
     id: 21,
     title: 'Narzędzia',
     slug: 'narzedzia',
@@ -201,7 +201,7 @@ const SHOP_PRODUCTS_DATA = [
       }
     ]
   },
-  {
+  warsztaty: {
     id: 27,
     title: 'Warsztaty',
     slug: 'warsztaty',
@@ -232,7 +232,7 @@ const SHOP_PRODUCTS_DATA = [
       }
     ]
   },
-  {
+  urzadzenia: {
     id: 32,
     title: 'Urządzenia',
     slug: 'urzadzenia',
@@ -263,6 +263,6 @@ const SHOP_PRODUCTS_DATA = [
       }
     ]
   }
-]
+}
 
 export default SHOP_PRODUCTS_DATA
